@@ -1,0 +1,119 @@
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes colour {
+    0% {
+        color: #ff5733;
+        text-shadow: 0 0 10px #ff5733, 0 0 20px #ff5733, 0 0 30px #ff5733, 0 0 40px #ff5733, 0 0 50px #ff5733, 0 0 60px #ff5733, 0 0 70px #ff5733;
+    }
+
+    50% {
+        color: #d4eadb;
+        text-shadow: 0 0 10px #33ff77, 0 0 20px #33ff77, 0 0 30px #33ff77, 0 0 40px #33ff77, 0 0 50px #33ff77, 0 0 60px #33ff77, 0 0 70px #33ff77;
+    }
+
+    100% {
+        color: #3377ff;
+        text-shadow: 0 0 10px #3377ff, 0 0 20px #3377ff, 0 0 30px #3377ff, 0 0 40px #3377ff, 0 0 50px #3377ff, 0 0 60px #3377ff, 0 0 70px #3377ff;
+    }
+}
+
+.animated-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 300px;
+    color: whitesmoke;
+    display: flex;
+    font-family: monospace;
+}
+
+.animated-text span {
+    position: relative;
+    margin-left: 10px;
+    font-family: monospace;
+}
+
+.animated-text span::before {
+    content: "Developer";
+    color: var(--blue-color);
+    animation: words 25s infinite;
+}
+
+.animated-text span::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #081b29;
+    ;
+    border-left: 2px solid var(--blue-color);
+    right: -8px;
+    animation: cursor .8s infinite, typing 30s steps(10) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #081b29;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    25% {
+        content: "Designer";
+    }
+
+    26%,
+    50% {
+        content: "Developer";
+    }
+
+    51%,
+    75% {
+        content: "Freelancer";
+    }
+
+    76%,
+    100% {
+        content: "Learner :)";
+    }
+}
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    50%,
+    55%,
+    70%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+
+/* typing animation section ends here  */
+#react {
+    animation: rotate 25s linear infinite;
+}
