@@ -3,88 +3,102 @@
         visibility: hidden;
     }
 
-   
     nav {
-        display:block;
+        display: block;
+        position: static;
     }
+
     .menu {
         visibility: visible;
-        position:fixed;
+        position: fixed;
         right: 5px;
         top: 15px;
     }
-    body{
+
+    body {
         overflow-x: hidden;
         width: 100%;
-        
+
     }
 
-    nav{
-        position: static;
+    #home {
+        display: flex;
+        flex-wrap: wrap-reverse;
     }
-        #home{
-            display: flex;
-            flex-wrap: wrap-reverse;
-        }
-        .animated-text{
-            position: absolute;
-            top: 20%;
-        } 
-        /* home section start here */
-        #home img{
-            height: 80vw;
-            width:  80vw;
-        }
-        #home-para{
-            font-size: large;
-        }
-        .icons{
-            flex-direction: column;
-            align-items: flex-start;
-              }
-            .icons img{
-                margin-left: 30vw;
-            }
 
-           /* about section starts here */
-           #about{
-            flex-direction: column;
-           }
-           #about div p{
-            font-size: large;
-
-           }
-           #abt-img{
-            height: 70vw;
-            width: 70vw;
-           }
-
-           /* project section starts here */
-           #project img{
-            height: 70vw;
-            width: 50vw;
-           }
-           .row{
-            justify-content: center;
-           }
-
-           /* skill section starts here */
-           #skills {
-             border: none;
-           }
-           .skill-row img{
-            height:60vw ;
-            width: 70vw;
-
-           }
-
-           #summary{
-            width: 70%;
-           }
+    .animated-text {
+        position: absolute;
+        top: 20%;
     }
+
+    /* home section start here */
+    #home img {
+        height: 80vw;
+        width: 80vw;
+    }
+
+    #home-para {
+        font-size: large;
+    }
+
+    .icons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .icons img {
+        margin-left: 30vw;
+    }
+
+    /* about section starts here */
+    #about {
+        flex-direction: column;
+    }
+
+    #about div p {
+        font-size: large;
+
+    }
+
+    #abt-img {
+        height: 70vw;
+        width: 70vw;
+    }
+
+    /* project section starts here */
+    #project img {
+        height: 70vw;
+        width: 50vw;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    /* skill section starts here */
+    #skills {
+        border: none;
+    }
+
+    .skill-row img {
+        height: 60vw;
+        width: 70vw;
+
+    }
+
+    #summary {
+        width: 70%;
+    }
+}
 
 @media(max-width:400px) {
     .sidebar {
         width: 100%;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        ;
     }
 }
